@@ -1,0 +1,57 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.navbar{
+    background: #49A37B;
+    background: linear-gradient(to bottom,  #49A37B,  #add6c4);
+    text-decoration: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.navbar li {
+    display: inline-block;
+    text-align: end;
+}
+.navbar ul{
+    padding-left: 250px;
+}
+
+.navbar img{
+    position: absolute;
+    border-radius: 15px;
+}
+
+#sidebar {
+  
+}
+
+.buttons-nb {
+	box-shadow:inset 0px 0px 0px 2px #4fa880;
+	background:linear-gradient(to bottom, #3f9e73 5%, #49a37a 100%);
+	background-color:#3f9e73;
+	border-radius:5px;
+	border:1px solid #4e9173;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:10px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #709e89;
+}
+.buttons-nb:hover {
+	background:linear-gradient(to bottom, #49a37a 5%, #3f9e73 100%);
+	background-color:#49a37a;
+}
+.buttons-nb:active {
+	position:relative;
+	top:1px;
+}
+
