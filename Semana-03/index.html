@@ -9,73 +9,60 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
         <title>Landing Page</title>
     </head>
-    <body>
-
+    <body>   
         <section class="navbar">
             <nav> 
-                <img src="img/logo.png" alt=""> 
-                <ul>
-                   
-                    <li><button class="buttons-nb" title="go to home">OUR JOB</button></li>
-                    <li><button class="buttons-nb" title=" go to our Functionalities">FUNCIONALITIES</button></li>
-                    <li><button class="buttons-nb" title="go to why Trackgenix">WHY US</button></li>
-                    <li> <button class="buttons-nb" title="go to  Contact">CONTACT US</button></li>
-                    <li><button class="buttons-nb" title="go to about us">WHO WE ARE</button></li>
-                    <li><button class="buttons-nb" title="go to site map">SITE MAP</button></li>
-                </ul>              
+                <img src="#" alt="logo"> 
+                <div>    
+                    <a href="#">OUR JOB</a>
+                    <a href="#">FUNCIONALITIES</a>
+                    <a href="#">WHY US</a>
+                    <a href="#">CONTACT US</a>
+                    <a href="#">WHO WE ARE</a>
+                    <a href="#">SITE MAP</a>
+                </div>              
             </nav>
         </section>
-        
-        
-        <aside id="sidebar">
-           
+        <aside class="sidebar">
             <nav>
                 <ul>
-                    <li> <button>Home</button></li>
-                    <li> <button>SignUp</button> </li>
-                    <li> <button>LogIn</button>  </li>
-                    <li> <button>Contac Us</button></li>
+                    <li> <a  href="#">Home</a></li>
+                    <li> <a  href="#">SignUp</a> </li>
+                    <li> <a  href="#">LogIn</a>  </li>
+                    <li> <a  href="#">Contac Us</a></li>
                 </ul>
             </nav>
         </aside>
 
-        <p>
-            We help to register the hours worked
-        </p>
-       
-        <img src="https://radiumrocket.com/static/rocket-logo-883f208f5b6a41d21540cfecae22fa07.png" alt="radiumrocket"
-            style="width:240px;height:300px">
-        <section>
-            <h2>Functionalities</h2>
-            <ul>
-                <span>
-                    <li>
-                        Record of hours
-                    </li>
-                    <img src="img/timesheet.png" style="width:400px;height:300px" alt="table hours">
-                </span>
-                <span>
-                    <li>
-                        Reports
-                    </li>
-                    <img src="img/reports.png" style="width:400px;height:300px" alt="reports">
-                </span>
-                <span>
-                    <li>
-                        Resource management
-                    </li>
-                    <img src="img/gestion-resources.png" style="width:400px;height:300px" alt="resources management">
-                </span>
-                <span>
-                    <li>
-                        Multiple Roles
-                    </li>
-                    <img src="img/people-project.png" style="width:500px;height:300px" alt="people on project">
-                </span>
-            </ul>
+        <section class="home">
+            <h1>TRACKGENIX🕗</h1>
         </section>
-        <section>
-            <h2> Why you should use Trackgenix🕗?</h2>
+        <section class="our-job">
+            <h2>Our Job</h2>
+            <h2>What we do at Trackgenix🕗</h2>
+            <p>
+                We provide Software Development services to companies around the world.
+            </p>
+            <img src="#" alt="">       
+        </section>
+        
+        <section class="functionalities">
+            <h2>Functionalities</h2>
+                <span>                
+                    Record og hours                               
+                </span>
+                <span>                  
+                    Reports                                   
+                </span>
+                <span>
+                    Resource management                
+                </span>
+                <span>                   
+                    Multiple Roles        
+                </span>      
+        </section>
+        <section class="choose">
+            <h2> Choose Trackgenix🕗</h2>
             <ul>
                 <li> It’s a productivity booster </li>
                 <li>Traceability of the process and employee control. </li>
@@ -83,8 +70,11 @@
                 <li>Helps manager to determine the planned path for decision making</li>
             </ul>
         </section>
-        <section style="border: 1px solid black">
+        <section class="contact">
             <h2>CONTACT</h2>
+            <span>
+                Leve your info and we'll get in touch
+            </span>
             <form action="">
                 <div>
                     <label for="name">Name:</label>
@@ -111,8 +101,8 @@
                 </div>
             </form>
         </section>
-        <section>
-            <h2>ABOUT US</h2>
+        <section class="about-us">
+            <h2>WHO WE ARE</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nesciunt, harum ipsam assumenda aliquam
                 asperiores culpa eos quis repudiandae laborum hic dolores blanditiis nulla cumque porro amet, itaque dolor
@@ -135,8 +125,9 @@
                 eligendi! Rem alias cupiditate illo!
             </p>
         </section>
-        <section>
-            <nav> Products
+        <section class="sitemap">  
+            <nav>
+                 Products
                 <ol>
                     <a href="#">
                         <li>Features</li>
@@ -152,7 +143,8 @@
                     </a>
                 </ol>
             </nav>
-            <nav> Company
+            <nav>
+                 Company
                 <ol>
                     <a href="">
                         <li>About us</li>
@@ -168,7 +160,8 @@
                     </a>
                 </ol>
             </nav>
-            <nav> Support
+            <nav>
+                 Support
                 <ol>
                     <a href="">
                         <li>Help</li>
@@ -185,7 +178,7 @@
                 </ol>
             </nav>
         </section>
-        <footer style="text-align:center;">
+        <footer class="footer" style="text-align:center;">
             <div style="text-align:center;">
                 <a href="http://www.whatsapp.com">
                     <img src="img/wsp.png" alt="" style="width:35px;height:35px">
