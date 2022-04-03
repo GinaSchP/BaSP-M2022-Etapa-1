@@ -16,17 +16,19 @@ Gina Schiappa Pietra
 ```
 Design of a complete screenflow in Figma.
 ```
-![logo figma](/BaSP-M2022-Etapa-1/img/figma.png)
+<img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/figma_logo_icon_170157.png" width="40" alt="logo-figma"/>
+
 ## Week 02
 
 ```
 Creation of the structure of a landing page in pure html.
 ```
-![logo html](/BaSP-M2022-Etapa-1/img/html.png)
+<img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" width="40" alt="logo-figma"/>
+
 ## Week 03
 
 ```
 styles were added to the html structure using css
 ```
-![logo html-css](/BaSP-M2022-Etapa-1/img/html-css.png)
-
+<img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" width="40" alt="logo-figma"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" width="40" alt="logo-figma"/>
