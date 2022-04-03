@@ -4,119 +4,86 @@ html{
 body {
     font-family: 'Roboto', sans-serif;
 	background: #f2f8f5;
-	margin: 0%;
+	margin: 0%;	
 }
 *{
-		text-decoration: none;	
+	text-decoration: none;
 }
-
-.navbar{
+header{
     background: #49A37B;
     background: linear-gradient(to bottom,  #49A37B,  #add6c4);
     border-radius: 5px;
 	height: 50px;
 	margin-bottom: 0%;
-}
-	
-.navbar div{
+	display: block;
+}	
+header div{
 	margin-left: 30%;
 }
-.navbar nav{
-	margin-bottom: 0%;
-}
-
-.navbar a{
+header a{
 	color: white;
 	margin-left: 1%;
 	margin-right: 1%;
 }
-
-.sidebar{
+header img{
+	position:absolute;
+}
+aside{
 	background: #49A37B;
     background: linear-gradient(to bottom,  #49A37B,  #add6c4);
 	width: 10%;
+	display: flex;	
+	position: relative;
+    float: left;
+    flex: 1;
 }
-.sidebar li{
+aside ul{
+	padding-inline-start: 5px;
+}
+aside li{	
 	list-style: none;
-	padding: 2%;
 }
-
-
-.sidebar a{
+aside a{
 	color: black;
+	text-decoration: none;
 }
-
-	h1{
-		letter-spacing: 2px;
-		text-align: center;
-		padding: 0px;
-		margin: 0px;
-	}
-
-.home h2{
+h1{
+	letter-spacing: 2px;
 	text-align: center;
-	margin: 0px;
 	padding: 0px;
-}
-
-.home p{
-	border-color: black;
-	border-radius: 5px;
-	background: #49A37B;
-	box-sizing: border-box;
-	width: 400px;
-	margin: 0%;
-	text-align: center;	
-}
-
+	margin: 0px;
+	font-size: 200%;
+	}
 .home{
-
 	border-color: black;
 	width: 400px;
 	padding: 1%;
 	margin-left: auto;
 	margin-right: auto;
 }
-
-.home img{
-	border: 0.5px solid;
-	width: auto;
-	border-color: rgb(26, 25, 25);
-	border-radius: 5px;
-	margin-top: 2px;;
-	
-}
-
-h1{
-	font-size: 200%;
-	text-align: center;
-}
-
 .our-job{
 	text-align: center;
-	background: #49A37B;
+	background: #AACE9B;
 	width: 40%;
+	border-radius: 10px;
 	margin-left: auto;
-	margin-right: auto;
-	
+	margin-right: auto;	
 }
-
 .functionalities{
 	text-align: center;
 }
-.functionalities span{
+.functionalities div{
 	display: inline-block;
 	background: #49A37B;
     background: linear-gradient(to bottom,  #49A37B,  #add6c4);
-	width: 10%;
-	height: 50px;
+	width: 15%;
+	height: 70px;
 	padding: 2%;
 	color: white;
 	margin: 2%;
 	border-radius: 10px;
 	list-style: none;
 }
-
 .choose h2{
  text-align: center;
 }
@@ -129,9 +96,7 @@ h1{
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 10px;
-
 }
-
 .contact h2{
 	text-align: center;
 }
@@ -140,29 +105,27 @@ h1{
 	width: 30%;
 	margin-left: auto;
 	margin-right: auto;
-	border-radius: 10px;
-	
+	border-radius: 5px;
+	border: black solid 1px;	
 }
-/*DEBERIA CONTINUAR LA LINEA BLANCA*/
-.contact span {
+.contact .subtitle {
 	background-color: #f2f8f5;
-	width: fit-content;
+	padding: 15px;
+	border: black solid 1px;
 }
-
+.contac button{
+	float: right;
+}
 .contact form{
 	display: table-caption;
 }
-
-
-
 .about-us h2{
 	text-align: center;
 }
-
 .about-us{
 	background: #AACE9B;
 	display: inline-block;
-	width: 70%;
+	width: 90%;
 	margin: 3%;
 	padding: 3%;
 	display: block;
@@ -170,22 +133,24 @@ h1{
 	margin-right: auto;
 	border-radius: 10px;
 }
-
 .sitemap{
 	border-top: solid 1px #49A37B;
-
 }
-.sitemap nav{
+.sitemap div{
     background: linear-gradient(180deg, #AACE9B 0%, rgba(170, 206, 155, 0.541667) 45.83%, rgba(170, 206, 155, 0.708333) 95.31%, rgba(170, 206, 155, 0) 100%);
-  	width: 15%;
+  	width: 20%;
 	display: inline-block;
 	color: black;
 	margin-left: 10%;
+	font-weight: bold;	
 }
-
-
+.sitemap a{
+	font-weight: normal;
+	color: black;
+}
 .footer{
+	text-align: center;
 	border-top: solid 1px #49A37B;
 	padding: 2%;
-	
 }
+

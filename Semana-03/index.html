@@ -10,34 +10,31 @@
         <title>Landing Page</title>
     </head>
     <body>   
-        <section class="navbar">
-            <nav> 
-                <img src="#" alt="logo"> 
+        <header>          
+                <img src="../img/logo.png" alt="logo"> 
                 <div>    
-                    <a href="#">OUR JOB</a>
-                    <a href="#">FUNCIONALITIES</a>
-                    <a href="#">WHY US</a>
-                    <a href="#">CONTACT US</a>
-                    <a href="#">WHO WE ARE</a>
-                    <a href="#">SITE MAP</a>
+                    <a href="#our-job">OUR JOB</a>
+                    <a href="#functionalities">FUNCIONALITIES</a>
+                    <a href="#choose-us">WHY US</a>
+                    <a href="#contact">CONTACT US</a>
+                    <a href="#history">WHO WE ARE</a>
+                    <a href="#sitemap">SITE MAP</a>
                 </div>              
-            </nav>
-        </section>
-        <aside class="sidebar">
+            </header>
+        <aside>
             <nav>
                 <ul>
-                    <li> <a  href="#">Home</a></li>
+                    <li> <a  href="#home">Home</a></li>
                     <li> <a  href="#">SignUp</a> </li>
                     <li> <a  href="#">LogIn</a>  </li>
-                    <li> <a  href="#">Contac Us</a></li>
+                    <li> <a  href="#contact">Contact Us</a></li>
                 </ul>
             </nav>
         </aside>
-
-        <section class="home">
-            <h1>TRACKGENIX🕗</h1>
-        </section>
-        <section class="our-job">
+        <div class="home">
+             <h1>TRACKGENIX🕗</h1>
+        </div>
+        <section id="our-job" class="our-job">
             <h2>Our Job</h2>
             <h2>What we do at Trackgenix🕗</h2>
             <p>
@@ -46,22 +43,22 @@
             <img src="#" alt="">       
         </section>
         
-        <section class="functionalities">
+        <section id="functionalities" class="functionalities">
             <h2>Functionalities</h2>
-                <span>                
+                <div>                
                     Record og hours                               
-                </span>
-                <span>                  
+                </div>
+                <div>                  
                     Reports                                   
-                </span>
-                <span>
+                </div>
+                <div>
                     Resource management                
-                </span>
-                <span>                   
+                </div>
+                <div>                   
                     Multiple Roles        
-                </span>      
+                </div>      
         </section>
-        <section class="choose">
+        <section id="choose-us" class="choose">
             <h2> Choose Trackgenix🕗</h2>
             <ul>
                 <li> It’s a productivity booster </li>
@@ -70,11 +67,11 @@
                 <li>Helps manager to determine the planned path for decision making</li>
             </ul>
         </section>
-        <section class="contact">
+        <section id="contact" class="contact">
             <h2>CONTACT</h2>
-            <span>
+            <div class="subtitle">
                 Leve your info and we'll get in touch
-            </span>
+            </div>
             <form action="">
                 <div>
                     <label for="name">Name:</label>
@@ -101,7 +98,7 @@
                 </div>
             </form>
         </section>
-        <section class="about-us">
+        <section id="history" class="about-us">
             <h2>WHO WE ARE</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nesciunt, harum ipsam assumenda aliquam
@@ -125,84 +122,56 @@
                 eligendi! Rem alias cupiditate illo!
             </p>
         </section>
-        <section class="sitemap">  
-            <nav>
-                 Products
+        <section id="sitemap"class="sitemap">  
+            <div>
+                PRODUCTS
                 <ol>
-                    <a href="#">
-                        <li>Features</li>
-                    </a>
-                    <a href="">
-                        <li>Downloads</li>
-                    </a>
-                    <a href="">
-                        <li>Integrations</li>
-                    </a>
-                    <a href="">
-                        <li>Additional features</li>
-                    </a>
+                    <li><a href="">Features</a></li>
+                    <li><a href="">Downloads</a></li>
+                    <li><a href="">Integrations</a></li>
+                    <li><a href="">Additional features</a></li>
                 </ol>
-            </nav>
-            <nav>
-                 Company
+            </div>
+            <div>
+                COMPANY
                 <ol>
-                    <a href="">
-                        <li>About us</li>
-                    </a>
-                    <a href="">
-                        <li> Customers</li>
-                    </a>
-                    <a href="">
-                        <li>Resources</li>
-                    </a>
-                    <a href="">
-                        <li>Blog</li>
-                    </a>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Customers</a></li>
+                    <li><a href="">Resources</a></li>
+                    <li><a href="">Blog</a></li>
                 </ol>
-            </nav>
-            <nav>
-                 Support
+            </div>
+            <div>
+                SUPPORT
                 <ol>
-                    <a href="">
-                        <li>Help</li>
-                    </a>
-                    <a href="">
-                        <li>Tutorals</li>
-                    </a>
-                    <a href="">
-                        <li>API</li>
-                    </a>
-                    <a href="">
-                        <li>Contact</li>
-                    </a>
+                    <li><a href="">Help</a></li>
+                    <li><a href="">Tutorals</a></li>
+                    <li><a href="">API</a></li>
+                    <li><a href="">Contact</a></li>
                 </ol>
-            </nav>
+            </div>
         </section>
-        <footer class="footer" style="text-align:center;">
-            <div style="text-align:center;">
+        <footer class="footer">
+            <div>
                 <a href="http://www.whatsapp.com">
-                    <img src="img/wsp.png" alt="" style="width:35px;height:35px">
+                    <img src="../img/wsp.png" alt="" style="width:35px;height:35px">
                 </a>
                 <a href="http://www.instagram.com">
-                    <img src="img/ig.png" alt="" style="width:35px;height:35px">
+                    <img src="../img/ig.png" alt="" style="width:35px;height:35px">
                 </a>
                 <a href="http://www.facebook.com">
-                    <img src="img/fb.png" alt="" style="width:35px;height:35px">
+                    <img src="../img/fb.png" alt="" style="width:35px;height:35px">
                 </a>
                 <a href="http://www.linkedin.com">
-                    <img src="img/lk.png" alt="" style="width:35px;height:35px">
+                    <img src="../img/lk.png" alt="" style="width:35px;height:35px">
                 </a>
-
             </div>
             <div>
                 Rosario, Argentina
-
             </div>
             <div>
                 Copyright © 2022 Trackgenix SA . All rights reserved
             </div>
         </footer>
-
     </body>
-
 </html>
