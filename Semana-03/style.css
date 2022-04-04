@@ -2,40 +2,38 @@ html{
 	margin:0%
 }
 body {
-    font-family: 'Roboto', sans-serif;
+	margin: 0%;
 	background: #f2f8f5;
-	margin: 0%;	
+    font-family: 'Roboto', sans-serif;		
 }
 *{
 	text-decoration: none;
 }
 header{
+	display: block;
+	height: 50px;
     background: #49A37B;
     background: linear-gradient(to bottom,  #49A37B,  #add6c4);
-    border-radius: 5px;
-	height: 50px;
-	margin-bottom: 0%;
-	display: block;
+    border-radius: 5px;	
 }	
 header div{
 	margin-left: 30%;
 }
 header a{
-	color: white;
 	margin-left: 1%;
 	margin-right: 1%;
+	color: white;
+	text-transform: uppercase;
 }
 header img{
 	position:absolute;
 }
-aside{
+aside{	
+	position: relative;
+	width: 10%;
+    float: left;
 	background: #49A37B;
     background: linear-gradient(to bottom,  #49A37B,  #add6c4);
-	width: 10%;
-	display: flex;	
-	position: relative;
-    float: left;
-    flex: 1;
 }
 aside ul{
 	padding-inline-start: 5px;
@@ -48,39 +46,40 @@ aside a{
 	text-decoration: none;
 }
 h1{
-	letter-spacing: 2px;
-	text-align: center;
 	padding: 0px;
 	margin: 0px;
+	text-align: center;
 	font-size: 200%;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 	}
 .home{
-	border-color: black;
 	width: 400px;
-	padding: 1%;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 1%;
+	border-color: black;
 }
 .our-job{
-	text-align: center;
-	background: #AACE9B;
 	width: 40%;
-	border-radius: 10px;
 	margin-left: auto;
 	margin-right: auto;	
+	background: #AACE9B;
+	border-radius: 10px;
+	text-align: center;
 }
 .functionalities{
 	text-align: center;
 }
 .functionalities div{
-	display: inline-block;
-	background: #49A37B;
-    background: linear-gradient(to bottom,  #49A37B,  #add6c4);
+	display: inline-block;	
 	width: 15%;
 	height: 70px;
-	padding: 2%;
-	color: white;
 	margin: 2%;
+	padding: 2%;
+	background: #49A37B;
+    background: linear-gradient(to bottom,  #49A37B,  #add6c4);
+	color: white;
 	border-radius: 10px;
 	list-style: none;
 }
@@ -88,29 +87,30 @@ h1{
  text-align: center;
 }
 .choose{
-	background: #AACE9B;
 	width: 30%;
 	padding: 0.5%;
 	margin-top: 2%;
 	margin-bottom: 2%;
 	margin-left: auto;
 	margin-right: auto;
+	background: #AACE9B;
 	border-radius: 10px;
 }
-.contact h2{
+h2{
 	text-align: center;
+	text-transform: uppercase;
 }
 .contact{
-	background: #AACE9B;
 	width: 30%;
 	margin-left: auto;
 	margin-right: auto;
+	background: #AACE9B;
 	border-radius: 5px;
 	border: black solid 1px;	
 }
 .contact .subtitle {
-	background-color: #f2f8f5;
 	padding: 15px;
+	background-color: #f2f8f5;
 	border: black solid 1px;
 }
 .contac button{
@@ -119,29 +119,26 @@ h1{
 .contact form{
 	display: table-caption;
 }
-.about-us h2{
-	text-align: center;
-}
 .about-us{
-	background: #AACE9B;
 	display: inline-block;
+	display: block;
 	width: 90%;
 	margin: 3%;
 	padding: 3%;
-	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	background: #AACE9B;
 	border-radius: 10px;
 }
 .sitemap{
 	border-top: solid 1px #49A37B;
 }
-.sitemap div{
-    background: linear-gradient(180deg, #AACE9B 0%, rgba(170, 206, 155, 0.541667) 45.83%, rgba(170, 206, 155, 0.708333) 95.31%, rgba(170, 206, 155, 0) 100%);
-  	width: 20%;
+.sitemap div{ 
 	display: inline-block;
-	color: black;
+	width: 20%;
 	margin-left: 10%;
+	background: linear-gradient(180deg, #AACE9B 0%, rgba(170, 206, 155, 0.541667) 45.83%, rgba(170, 206, 155, 0.708333) 95.31%, rgba(170, 206, 155, 0) 100%);
+	color: black;
 	font-weight: bold;	
 }
 .sitemap a{
@@ -149,8 +146,8 @@ h1{
 	color: black;
 }
 .footer{
-	text-align: center;
 	border-top: solid 1px #49A37B;
 	padding: 2%;
+	text-align: center;
 }
 
