@@ -25,6 +25,8 @@ Creation of the structure of a landing page in pure html.
 ```
 <img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" width="40" alt="logo-figma"/>
 
+https://ginaschp.github.io/BaSP-M2022-Etapa-1/Semana-02/index.html
+
 ## Week 03
 
 ```
@@ -32,6 +34,8 @@ Styles were added to the html structure using css
 ```
 <img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" width="40" alt="logo-figma"/>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" width="40" alt="logo-figma"/>
+
+https://ginaschp.github.io/BaSP-M2022-Etapa-1/Semana-03/index.html
 
 ## Week 04
 
@@ -41,6 +45,7 @@ Use of Flexbox as the main tool for the creation of a Responsive Design followin
 <img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" width="40" alt="logo-figma"/>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" width="40" alt="logo-responsive"/>
 <img src="https://www.clipartmax.com/png/middle/270-2706458_responsive-web-icon-responsive-web-design.png" width="60" alt="logo-figma"/>
-
+ 
+ Progress: https://ginaschp.github.io/BaSP-M2022-Etapa-1/Semana-04/index.html
 
 
