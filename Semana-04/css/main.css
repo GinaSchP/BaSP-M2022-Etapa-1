@@ -1,0 +1,142 @@
+h1{
+    font-size: 200%;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-top: 10%;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+}
+h2{
+    text-transform: uppercase;
+    font-weight: bold; 
+}
+
+.our-job{
+    background: #AACE9B;
+    display: flex;
+    border-radius: 10px;
+    margin: 10%;
+    padding: 5%;
+}
+.our-job div{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+
+.our-job img{
+    width: 20%;
+    height: 25%;
+}
+
+h2{
+   text-align: center;
+   margin: 5%;
+}
+
+.functionalities-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;  
+}
+
+.functionalities-box div{
+    flex-basis: 200px;
+    height: 100px;
+    margin: 1%;
+    background: linear-gradient(to bottom, #49A37B, #add6c4);
+    border-radius: 10px;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    color: white;
+    text-transform: uppercase;
+}
+
+.choose ul{
+    background: #AACE9B;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+    list-style: disc;
+    padding: 10%;
+    flex-grow: 3;
+}
+.contact{
+     background: #AACE9B;
+     display: flex;
+     flex-direction: column;
+     margin: 5%;
+     padding: 5%;
+}
+.contact .subtitle{
+    display: flex;
+    background: white;
+    height: 50px;
+    align-items: center;
+    border: solid black 1px;
+    padding-left: 10px;
+}
+.form-line{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+}
+.form-line input{
+    background-color:#AACE9B ;
+}
+
+.form-line #message{
+    height: 100px;
+}
+
+.form-line-category{
+    background: #AACE9B;
+}
+
+.form-line-button button{ 
+    background: #AACE9B;
+    width: 100%;
+}
+
+
+.about-us{
+    background: #AACE9B;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin: 10%;
+    padding: 10%;
+}
+.sitemap{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.sitemap div{
+    background: linear-gradient(180deg, #AACE9B 0%, rgba(170, 206, 155, 0.541667) 45.83%, rgba(170, 206, 155, 0.708333) 95.31%, rgba(170, 206, 155, 0) 100%);
+    width: 80%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 10%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+.sitemap ol{
+    list-style: decimal;
+    font-weight: normal;
+}
+.sitemap a{
+    
+    font-weight: normal;
+    color: black;
+}

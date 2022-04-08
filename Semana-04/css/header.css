@@ -1,0 +1,48 @@
+header{
+	display: flex;
+	height: 50px;
+    background: linear-gradient(to bottom,  #49A37B,  #add6c4);
+    border-radius: 5px;	
+}	
+header ul{
+display: flex;
+color: white;
+align-self: center;
+}
+
+header ul li{
+    color: white;
+    margin-right: 80px;
+}
+
+header a{
+    color: white;
+    text-transform: uppercase;
+}
+header img{
+	display: flex;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 600px){
+    header{
+        display: flex;
+        height: 50px;
+        background: linear-gradient(to bottom,  #49A37B,  #add6c4);
+        border-radius: 5px;	
+    }
+    header ul{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .burger-menu{
+        display: none;
+    }
+}
+
+
+
+
+

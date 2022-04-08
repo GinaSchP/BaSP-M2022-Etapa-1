@@ -1,0 +1,33 @@
+@media only screen and (min-width: 600px){
+    aside{	
+        display: flex;
+        width: 150px;
+        height: 200px;
+        background: #49A37B;
+        background: linear-gradient(to bottom,  #49A37B,  #add6c4);
+        justify-content: space-around;
+        /* float: left; */
+        position: absolute;
+    }
+    aside ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    aside a{
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 2px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+ aside{
+    display: none;
+}
+}
+
+
+
