@@ -1,8 +1,18 @@
-body {
-	margin: 0%;
+html {
+	font-size: 16px;
+  }
+  body {
+	padding: 0;
+	margin: 0;
 	background: #e5f4ed;
-    font-family: 'Roboto', sans-serif;		
-}
-*{
+	font-family: "Roboto", sans-serif;
+  }
+  * {
 	text-decoration: none;
-}
+	box-sizing: border-box;
+  }
+  @media (min-width: 768px) {
+	html {
+	  font-size: 20px;
+	}
+  }
