@@ -1,13 +1,13 @@
 aside {
-    padding-top: 4rem;
-    padding-left: 1rem;
-    z-index: 1000;
     display: none;
     position: fixed;
     height: 100vh;
     width: 15vw;
+    padding-top: 4rem;
+    padding-left: 1rem;
     background: #49A37B;
     background: linear-gradient(to bottom, #49A37B, #add6c4);
+    z-index: 1000;
 }
 aside li{
     margin-top: 1rem;
@@ -21,7 +21,6 @@ aside a:hover{
 }
 @media (min-width: 768px) {
     aside {
-        display: flex;
-         
+        display: flex;     
     }
 }
