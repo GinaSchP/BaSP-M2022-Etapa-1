@@ -23,7 +23,7 @@ Design of a complete screenflow in Figma.
 ```
 Creation of the structure of a landing page in pure html.
 ```
-<img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" width="40" alt="logo-figma"/>
+<img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" width="40" alt="logo-html"/>
 
 https://ginaschp.github.io/BaSP-M2022-Etapa-1/Semana-02/index.html
 
@@ -32,8 +32,8 @@ https://ginaschp.github.io/BaSP-M2022-Etapa-1/Semana-02/index.html
 ```
 Styles were added to the html structure using css
 ```
-<img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" width="40" alt="logo-figma"/>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" width="40" alt="logo-figma"/>
+<img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" width="40" alt="logo-html"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" width="40" alt="logo-css"/>
 
 https://ginaschp.github.io/BaSP-M2022-Etapa-1/Semana-03/index.html
 
@@ -42,10 +42,19 @@ https://ginaschp.github.io/BaSP-M2022-Etapa-1/Semana-03/index.html
 ```
 Use of Flexbox as the main tool for the creation of a Responsive Design following the concept of Mobile First.
 ```
-<img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" width="40" alt="logo-figma"/>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" width="40" alt="logo-responsive"/>
-<img src="https://www.clipartmax.com/png/middle/270-2706458_responsive-web-icon-responsive-web-design.png" width="60" alt="logo-figma"/>
+<img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" width="40" alt="logo-html"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" width="40" alt="logo-css"/>
+<img src="https://www.clipartmax.com/png/middle/270-2706458_responsive-web-icon-responsive-web-design.png" width="60" alt="logo-responsive"/>
  
  Progress: https://ginaschp.github.io/BaSP-M2022-Etapa-1/Semana-04/index.html
 
+ ## Week 05
+
+```
+JavaScript practice exercises
+```
+<img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" width="40" alt="logo-html"/>
+<img src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg" width="40" alt="logo-js"/>
+
+Progress: https://ginaschp.github.io/BaSP-M2022-Etapa-1/Semana-05/index.html
 
