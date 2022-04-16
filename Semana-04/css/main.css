@@ -1,5 +1,5 @@
-h1 { 
-    margin-top: 2rem;  
+h1 {
+    margin-top: 2rem;
     font-weight: bold;
     letter-spacing: 3px;
     font-size: 2.5rem;
@@ -13,15 +13,6 @@ h1 {
 .content {
     width: 100vw;
     padding: 3.125rem 1rem;
-}
-@media (min-width: 768px) {
-    .home h1 {
-        font-size: 2rem;
-    }
-    .content {
-        width: 80vw;
-        margin-left: 15vw;
-    }
 }
 h2 {
     margin: 5%;
@@ -45,18 +36,14 @@ h2 {
     width: 20%;
     height: 25%;
 }
-@media (min-width: 768px) {
-    h2 {
-        font-size: 1.5rem;
-    }
-}
 .functionalities-big-box {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 .functionalities-big-box div {
-    flex-basis: 12rem;
+    flex-basis: 15rem;
     height: 8rem;
     margin: 1%;
     align-items: center;
@@ -69,11 +56,6 @@ h2 {
     display: flex;
     justify-content: center;
 }
-@media (min-width: 768px) {
-    .functionalities-box div {
-        flex-basis: 10rem;
-    }
-}
 .choose ul {
     display: flex;
     flex-direction: column;
@@ -83,11 +65,6 @@ h2 {
     background: #AACE9B;
     border-radius: 10px;
     list-style: disc;
-}
-@media (min-width: 768px) {
-    .choose ul li {
-        font-size: 30px;
-    }
 }
 .contact {
     display: flex;
@@ -108,11 +85,6 @@ h2 {
     display: flex;
     justify-content: space-around;
     margin: 15px;
-}
-@media (min-width: 768px) {
-    .form-line {
-        justify-content: flex-start;
-    }
 }
 .form-line input {
     margin-left: 2rem;
@@ -152,17 +124,6 @@ h2 {
     background: linear-gradient(180deg, #AACE9B 0%, rgba(170, 206, 155, 0.541667) 45.83%, rgba(170, 206, 155, 0.708333) 95.31%, rgba(170, 206, 155, 0) 100%);
     font-weight: bold;
 }
-@media (min-width: 768px) {
-    .sitemap {
-        flex-wrap: nowrap;
-    }
-   .sitemap div {
-        width: 21.8rem;
-        height: 10rem;
-        margin-left: 3%;
-        margin-right: 3%;
-    }
-}
 .sitemap ol {
     list-style: decimal;
     font-weight: normal;
@@ -170,4 +131,37 @@ h2 {
 .sitemap a {
     font-weight: normal;
     color: black;
+}
+@media (min-width: 768px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+    .home h1 {
+        font-size: 2rem;
+    }
+    .content {
+        width: 80vw;
+        margin-left: 15vw;
+    }
+    .functionalities-big-box {
+        flex-direction: row;
+    }
+    .functionalities-big-box div {
+        flex-basis: 12rem;
+    }
+    .choose ul li {
+        font-size: 30px;
+    }
+    .form-line {
+        justify-content: flex-start;
+    }
+    .sitemap {
+        flex-wrap: nowrap;
+    }
+    .sitemap div {
+        width: 21.8rem;
+        height: 10rem;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
 }

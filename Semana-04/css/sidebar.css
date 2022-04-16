@@ -5,8 +5,7 @@ aside {
     width: 15vw;
     padding-top: 4rem;
     padding-left: 1rem;
-    background: #49A37B;
-    background: linear-gradient(to bottom, #49A37B, #add6c4);
+    background: linear-gradient(50deg, #49a37b, #daf0e7);
     z-index: 1000;
 }
 aside li{
