@@ -58,3 +58,13 @@ JavaScript practice exercises
 
 Progress: https://ginaschp.github.io/BaSP-M2022-Etapa-1/Semana-05/index.html
 
+## Week 06
+
+```
+Create a login and signup with Html, Css and JavaScript
+```
+<img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" width="40" alt="logo-html"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" width="40" alt="logo-css"/>
+<img src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg" width="40" alt="logo-js"/>
+ 
+ Progress: https://ginaschp.github.io/BaSP-M2022-Etapa-1/Semana-06/index.html
