@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Semana-06/css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Semana-06/css/styles.css">
+    <link rel="stylesheet" href="../Semana-06/css/header.css">
+    <link rel="stylesheet" href="../Semana-06/css/footer.css">
+    <link rel="stylesheet" href="../Semana-06/css/employee-signup.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="../assets/logo.png" alt="logo">
+        <ul class="navbar-list">
+            <li><a class="nav-link" href="#our-job">our Job</a></li>
+            <li><a class="nav-link" href="#functionalities">Functionalities</a></li>
+            <li><a class="nav-link" href="#choose-us">Why Us</a></li>
+            <li><a class="nav-link" href="#contact">contact us</a></li>
+            <li><a class="nav-link" href="#history">who we are</a></li>
+            <li><a class="nav-link" href="#sitemap">site map</a></li>
+        </ul>
+        <button class="btn-burger">
+            <img class="burger-menu" src="../assets/burger-menu.png" alt="">
+        </button>
+    </header>
+
+    <main class="main-container">
+        <div class="signup-box">
+            <h2>SignUp</h2>
+            <form id="form-signup" class="form-signup" action="">
+                <div class="form-container">
+                    <div class="column-container">
+                        <div class="input-signup">
+                            <input id="name" type="text" placeholder="Name" class="input-box" required>
+                            <div id="nameAlert"></div>
+                        </div>
+                        <div class="input-signup">
+                            <input id="lastName" type="text" placeholder="Last Name" class="input-box" required>
+                            <div id="lastNameAlert"></div>
+                        </div>
+                        <div class="input-signup">
+                            <input id="dni" type="text" placeholder="DNI" class="input-box" required>
+                            <div id="dniAlert"></div>
+                        </div>
+                        <div class="input-signup">
+                            <input id="dateOfBirth" type="text" placeholder="Date of birth" class="input-box" required>
+                            <div id="dateOfBirthAlert"></div>
+                        </div>
+                        <div class="input-signup">
+                            <input id="phone" type="text" placeholder="Phone" class="input-box" required>
+                            <div id="phoneAlert"></div>
+                        </div>
+                        <div class="input-signup">
+                            <input id="address" type="text" placeholder="Address" class="input-box" required>
+                            <div id="addressAlert"></div>
+                        </div>
+                    </div>
+                    <div class="column-container">
+                        <div class="input-signup">
+                            <input id="city" type="text" placeholder="City" class="input-box" required>
+                            <div id="cityAlert"></div>
+                        </div>
+                        <div class="input-signup">
+                            <input id="zipCode" type="text" placeholder="Zip code" class="input-box" required>
+                            <div id="zipCodeAlert"></div>
+                        </div>
+                        <div class="input-signup">
+                            <input id="email" type="text" placeholder="Email" class="input-box" required>
+                            <div id="emailAlert"></div>
+                        </div>
+                        <div class="input-signup">
+                            <input id="password" type="password" placeholder="Password" class="input-box" required>
+                            <div id="passwordAlert"></div>
+                        </div>
+                        <div class="input-signup">
+                            <input id="passwordRepeat" type="password" placeholder="Repeat Password" class="input-box" required>
+                            <div id="passwordRepeatAlert"></div>
+                        </div>
+                        <button type="submit" class="btn-create">Create</button>
+                    </div>
+            </form>
+        </div>
+    </main>
+
+
+    <!--Nombre: Solo letras y debe tener más de 3 letras. 
+        Apellido: Solo letras y debe tener más de 3 letras. 
+        DNI: Solo número y debe tener más de 7 números. 
+        Fecha de Nacimiento: Con formato dd/mm/aaaa.
+        Teléfono: Solo número y debe tener 10 números.
+        Dirección: Al menos 5 caracteres con letras, números y un espacio en el medio.
+        Localidad: Texto alfanumérico y debe tener más de 3 letras. 
+        Código Postal: Solo número y debe tener entre 4 y 5 números. 
+        Email: Debe tener un formato de email válido.
+        Contraseña: Al menos 8 caracteres, formados por letras y números.
+        Repetir Contraseña: Al menos 8 caracteres, formados por letras y números.
+
+-->
+
+    <footer class="footer">
+        <div class="images">
+            <a href="http://www.whatsapp.com">
+                <img src="../assets/wsp.png" alt="Whatsapp-logo">
+            </a>
+            <a href="http://www.instagram.com">
+                <img src="../assets/ig.png" alt="Instagram-logo">
+            </a>
+            <a href="http://www.facebook.com">
+                <img src="../assets/fb.png" alt="Facebook-logo">
+            </a>
+            <a href="http://www.linkedin.com">
+                <img src="../assets/lk.png" alt="Linkedin-logo">
+            </a>
+        </div>
+        <div>
+            Rosario, Argentina
+        </div>
+        <div>
+            Copyright © 2022 Trackgenix SA . All rights reserved
+        </div>
+    </footer>
+
+</body>
+
+</html>

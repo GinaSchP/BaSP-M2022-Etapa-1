@@ -2,7 +2,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2%; 
+    padding: 2%;
+    margin-top: auto;
 }
 footer .images{
     align-self: center;

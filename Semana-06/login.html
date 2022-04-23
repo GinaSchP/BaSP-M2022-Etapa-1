@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Semana-06/css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Semana-06/css/styles.css">
+    <link rel="stylesheet" href="../Semana-06/css/header.css">
+    <link rel="stylesheet" href="../Semana-06/css/footer.css">
+    <link rel="stylesheet" href="../Semana-06/css/login.css">
+    <script src="js/login.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="../assets/logo.png" alt="logo">
+        <ul class="navbar-list">
+            <li><a class="nav-link" href="#our-job">our Job</a></li>
+            <li><a class="nav-link" href="#functionalities">Functionalities</a></li>
+            <li><a class="nav-link" href="#choose-us">Why Us</a></li>
+            <li><a class="nav-link" href="#contact">contact us</a></li>
+            <li><a class="nav-link" href="#history">who we are</a></li>
+            <li><a class="nav-link" href="#sitemap">site map</a></li>
+        </ul>
+        <button class="btn-burger">
+            <img class="burger-menu" src="../assets/burger-menu.png" alt="">
+        </button>
+    </header>
+    <main class="login-main">
+        <div class="login-box">
+            <h2> Log in </h2>               
+            <form class="form-container" id="form" action="">
+                <div class="input-login">
+                    <img id="login-img" class="login-img" src="../assets/logemail.png" alt="email-icon">
+                    <input class="error" id="email" type="text" required>
+                    <div id="alertemail"></div>
+                </div>
+                <div class="input-login">
+                    <img class="login-img" src="../assets/padlock.png" alt="email-icon">
+                    <input class="error" id="password" type="password" required>
+                    <div id="alertpass"></div>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="" id="checkbox">
+                    <label for="checkbox">Remember me</label>
+                </div>
+                <a class="forgot-password" href="#">Forgot password?</a>
+                <button type="submit" class="btn-login"> Login </button>
+            </form>
+        </div> 
+    </main>
+
+    <footer class="footer">
+        <div class="images">
+            <a href="http://www.whatsapp.com">
+                <img src="../assets/wsp.png" alt="Whatsapp-logo">
+            </a>
+            <a href="http://www.instagram.com">
+                <img src="../assets/ig.png" alt="Instagram-logo">
+            </a>
+            <a href="http://www.facebook.com">
+                <img src="../assets/fb.png" alt="Facebook-logo">
+            </a>
+            <a href="http://www.linkedin.com">
+                <img src="../assets/lk.png" alt="Linkedin-logo">
+            </a>
+        </div>
+        <div>
+            Rosario, Argentina
+        </div>
+        <div>
+            Copyright © 2022 Trackgenix SA . All rights reserved
+        </div>
+    </footer>
+
+</body>
+
+</html>
