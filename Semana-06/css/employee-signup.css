@@ -11,6 +11,12 @@
     box-shadow: 1px 6px 9px 0px #262626;
     border-radius:5px;
 }
+
+#dateOfBirth{
+    padding: 1rem;
+    border: #49A37B solid 2px;
+    border-radius: 5px;
+}
 .form-signup{
     display: flex;
     flex-wrap: wrap;
@@ -54,4 +60,62 @@ h2{
     color: white;
     border-radius: 5px;
     height: 30px;
+    width: 100%;
 } 
+
+.btn-reset{
+    border: none;
+    background-color: #bddab1;
+    font-size: 12px;
+    color: rgb(9, 9, 9);
+    border-radius: 5px;
+    height: 30px;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.alert{
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+.alert-active{
+    display: block;
+}
+
+.confirm-data{
+    background: rgba(42, 158, 42, 0.389);
+    color: white;
+    align-self: center;
+    border-radius: 3px;
+    padding: 1rem;
+    margin: 1rem;
+    display: none;
+}
+.confirm-data-active{
+    background: rgba(42, 158, 42, 0.389);
+    color: white;
+    align-self: center;
+    border-radius: 3px;
+    padding: 1rem;
+    margin: 1rem;
+    display: block;
+}
+.not-confirm{
+    background: rgba(183, 43, 43, 0.455);
+    color: white;
+    align-self: center;
+    border-radius: 3px;
+    padding: 1rem;
+    margin: 1rem;
+    display: none;
+}
+.not-confirm-active{
+    display: block;
+}
+.input-error{
+    border-bottom: red solid 2px;
+}
+.remove-styles{
+    border: none;
+}

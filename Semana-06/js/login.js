@@ -1,74 +1,117 @@
 window.onload = function() {
 
-    var email = document.getElementById('email');
-    var pass = document.getElementById('password');
-    var emailCorrect = false;
-    var passCorrect = false;
-   // var passwordValidation = false;
-    email.onblur = function(){
-        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
-            emailCorrect = true;
-        } else {
-            var inputLogin = document.getElementsByClassName("input-login");
-            inputLogin[0].style = "border-bottom: solid 2px red";
-            messageError = 'Invalid email'
-            var divError = document.getElementById("alertemail");
-            var pError = document.createElement("p");
-            pError.innerHTML = messageError;
-            pError.style = "color: red; font-size: 12px"
-            divError.appendChild(pError);
-            emailValidation = false;
-        };
-    };
-
-    email.onfocus = function(){
-        email.style = "border-color:none";
-        var divError = document.getElementById("alertemail");
-        divError.removeChild(divError.firstElementChild);
-        var inputLogin = document.getElementsByClassName("input-login");
-        inputLogin[0].style =  "border-bottom: solid #49A37B 0.5px";
+    const expressions = {
+        email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    }
+    const fields = {
+        password: false,
+        repeatPassword: false,
     }
 
-    pass.onblur = function(){
-        var nums = /[0-9]/;
-        var letters= /[a-zA-Z]/;
-        var resultNums = nums.test(pass.value);
-        var resultLetters = letters.test(pass.value);
-        if(resultNums == true && resultLetters == true){
-            passCorrect = true;
-        } else {
-            var inputLogin = document.getElementsByClassName("input-login");
-            inputLogin[1].style = "border-bottom: solid 2px red";
-            messageError = 'Invalid password'
-            var divError = document.getElementById("alertpass");
-            var pError = document.createElement("p");
-            pError.innerHTML = messageError;
-            pError.style = "color: red; font-size: 12px"
-            divError.appendChild(pError);
-            passCorrect = false;
+    var form = document.getElementById('form-login');
+    var inputs = document.querySelectorAll('#form-login input');
+
+    inputs.forEach((input) => {
+        input.addEventListener('blur', validForm);
+        input.addEventListener('focus', function () {
+            input.classList.remove('input-error');
+            input.parentElement.lastElementChild.classList.remove('alert-active');
+        });
+    });
+
+    function validForm(e) {
+        switch (e.target.name) {
+            case "email":
+                if (expressions.email.test(e.target.value)) {
+                    classListCorrect('email');
+                } else {
+                    classListIncorrect('email');
+                }
+                break;
+            case "password":
+                if (e.target.value.length >= 8 && lettersAndNumbers(e.target.value)) {
+                    classListCorrect('password');
+                } else {
+                    classListIncorrect('password');
+                }
+                break;
         }
     }
 
-    pass.onfocus = function(){
-        pass.style = "border-color:none";
-        var divError = document.getElementById("alertpass");
-        divError.removeChild(divError.firstElementChild);
-        var inputLogin = document.getElementsByClassName("input-login");
-        inputLogin[1].style = "border-bottom: solid #49A37B 0.5px";
+    function classListCorrect(id) {
+        document.getElementById(id).classList.remove('input-error');
+        document.getElementById(`${id}Alert`).classList.remove('alert-active');
+        fields[id] = true;
+    }
+    function classListIncorrect(id) {
+        document.getElementById(id).classList.add('input-error');
+        document.getElementById(`${id}Alert`).classList.add('alert-active');
+        fields[id] = false;
     }
 
-    var form = document.getElementById('form');
-    form.addEventListener('submit', function(e){
-        if(emailCorrect==true && passCorrect==true){
-            functionModal(email,pass);
+
+    function lettersAndNumbers(string) {
+        for (var i = 0; i < string.length; i++) {
+            var c = string.charAt(i);
+            if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == ' ') && isNaN(c)) {
+                return false;
+            }
+            return true;
+        }
+    }
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (fields.email & fields.password) {
+            var textCorrectData = 'Your data is correct ' + '\n';
+            for (var i = 0; i < inputs.length; i++) {
+                textCorrectData = textCorrectData + '\n' + `${inputs[i].name}` + ': ' + `${inputs[i].value}`;
+            }
+            var messageBox = document.createElement('div');
+            messageBox.classList.add('confirm-data-active');
+            messageBox.innerHTML = textCorrectData;
+            var position = document.getElementById('login-box');
+            position.appendChild(messageBox);
+
+            var clickboxexito = document.getElementById('login-box').lastElementChild;
+            clickboxexito.addEventListener('click' , function(){
+                document.getElementById('login-box').lastElementChild.remove();
+            })
+
+            form.reset();
+            inputs.forEach((input) => {
+                input.classList.remove('input-error');
+                input.parentElement.lastElementChild.classList.remove('alert-active');
+            });
+
         } else {
-            alert("Put correct email and password")
+            console.log(document.getElementById('not-confirm').classList)
+            document.getElementById('not-confirm').classList.add('not-confirm-active');
+
+            var textErrorData = 'The errors are: \n';
+            for (var i = 0; i < inputs.length; i++) {
+                if (!fields[`${inputs[i].name}`])
+                    textErrorData = textErrorData + '\n' + `${inputs[i].name}\n`;
+            }
+            var messageBoxError = document.createElement('div');
+            messageBoxError.classList.add('not-confirm-active');
+            messageBoxError.innerHTML = textErrorData;
+            var position = document.getElementById('not-confirm');
+            position.appendChild(messageBoxError);
+
+            var clickBoxError = document.getElementById('login-box').lastElementChild;
+            clickBoxError.addEventListener('click' , function(){
+                document.getElementById('login-box').lastElementChild.remove();
+                form.reset();
+            })
+
+            inputs.forEach((input) => {
+                input.classList.remove('input-error');
+                input.parentElement.lastElementChild.classList.remove('alert-active');
+            });
         }
     })
 
-    function functionModal(email,pass){
-        alert("User Email: " + email.value + "Password: " + pass.value)
-    }
 }
 
  

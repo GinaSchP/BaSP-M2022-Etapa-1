@@ -32,78 +32,73 @@
     </header>
 
     <main class="main-container">
-        <div class="signup-box">
-            <h2>SignUp</h2>
+        <div class="signup-box" id="signup-box">
+            <h2 id="h2"> SignUp</h2>
             <form id="form-signup" class="form-signup" action="">
                 <div class="form-container">
                     <div class="column-container">
+
+
+                        <div class="input-signup" id="box-name">
+                            <input id="name" class="input-box" type="text" name="name" placeholder="Name"  required>
+                            <div class="alert" id="nameAlert">Name format incorrect</div>
+                        </div>
+
+
                         <div class="input-signup">
-                            <input id="name" type="text" placeholder="Name" class="input-box" required>
-                            <div id="nameAlert"></div>
+                            <input id="lastName"class="input-box" type="text" name="lastName" placeholder="Last Name"  required>
+                            <div class="alert"  id="lastNameAlert">Last name format incorrect</div>
                         </div>
                         <div class="input-signup">
-                            <input id="lastName" type="text" placeholder="Last Name" class="input-box" required>
-                            <div id="lastNameAlert"></div>
+                            <input id="dni" type="text" name="dni" placeholder="DNI" class="input-box" required>
+                            <div class="alert"  id="dniAlert">DNI incorrect</div>
                         </div>
                         <div class="input-signup">
-                            <input id="dni" type="text" placeholder="DNI" class="input-box" required>
-                            <div id="dniAlert"></div>
+                            <input id="dateOfBirth"  type="date" name="dateOfBirth"  required>
+                            <div  class="alert"  id="dateOfBirthAlert">Date of birth incorrect</div>
                         </div>
                         <div class="input-signup">
-                            <input id="dateOfBirth" type="text" placeholder="Date of birth" class="input-box" required>
-                            <div id="dateOfBirthAlert"></div>
+                            <input id="phone" type="text" name="phone" placeholder="Phone" class="input-box" required>
+                            <div class="alert"  id="phoneAlert">Phone incorrect</div>
                         </div>
                         <div class="input-signup">
-                            <input id="phone" type="text" placeholder="Phone" class="input-box" required>
-                            <div id="phoneAlert"></div>
-                        </div>
-                        <div class="input-signup">
-                            <input id="address" type="text" placeholder="Address" class="input-box" required>
-                            <div id="addressAlert"></div>
+                            <input id="address" type="text" name="address" placeholder="Address" class="input-box" required>
+                            <div class="alert"  id="addressAlert">Adress incorrect</div>
                         </div>
                     </div>
                     <div class="column-container">
                         <div class="input-signup">
-                            <input id="city" type="text" placeholder="City" class="input-box" required>
-                            <div id="cityAlert"></div>
+                            <input id="city" type="text" name="city" placeholder="City" class="input-box" required>
+                            <div class="alert"  id="cityAlert">Not valid City</div>
                         </div>
                         <div class="input-signup">
-                            <input id="zipCode" type="text" placeholder="Zip code" class="input-box" required>
-                            <div id="zipCodeAlert"></div>
+                            <input id="postalCode" type="text" name="postalCode" placeholder="Postal code" class="input-box" required>
+                            <div class="alert"  id="postalCodeAlert">Not valid Postal Code</div>
                         </div>
                         <div class="input-signup">
-                            <input id="email" type="text" placeholder="Email" class="input-box" required>
-                            <div id="emailAlert"></div>
+                            <input id="email" type="text" name="email" placeholder="Email" class="input-box" required>
+                            <div class="alert"  id="emailAlert">Not valid email format</div>
                         </div>
                         <div class="input-signup">
-                            <input id="password" type="password" placeholder="Password" class="input-box" required>
-                            <div id="passwordAlert"></div>
+                            <input id="password" type="password" name="password" placeholder="Password" class="input-box" required>
+                            <div class="alert"  id="passwordAlert">Not valid Password</div>
                         </div>
                         <div class="input-signup">
-                            <input id="passwordRepeat" type="password" placeholder="Repeat Password" class="input-box" required>
-                            <div id="passwordRepeatAlert"></div>
+                            <input id="repeatPassword" type="password" name="repeatPassword" placeholder="Repeat Password" class="input-box" required>
+                            <div class="alert"  id="repeatPasswordAlert">Passwords not match</div>
                         </div>
                         <button type="submit" class="btn-create">Create</button>
+                        <button type="submit" id="btn-reset"class="btn-reset">Reset</button>
                     </div>
             </form>
         </div>
+        <!-- <div id="confirm-data" class="confirm-data">
+            The data is correct. Create yout User.
+        </div> -->
+        <div id="not-confirm" class="not-confirm">
+            The date is incorrect. Complete the form properly
+        </div>
     </main>
-
-
-    <!--Nombre: Solo letras y debe tener más de 3 letras. 
-        Apellido: Solo letras y debe tener más de 3 letras. 
-        DNI: Solo número y debe tener más de 7 números. 
-        Fecha de Nacimiento: Con formato dd/mm/aaaa.
-        Teléfono: Solo número y debe tener 10 números.
-        Dirección: Al menos 5 caracteres con letras, números y un espacio en el medio.
-        Localidad: Texto alfanumérico y debe tener más de 3 letras. 
-        Código Postal: Solo número y debe tener entre 4 y 5 números. 
-        Email: Debe tener un formato de email válido.
-        Contraseña: Al menos 8 caracteres, formados por letras y números.
-        Repetir Contraseña: Al menos 8 caracteres, formados por letras y números.
-
--->
-
     <footer class="footer">
         <div class="images">
             <a href="http://www.whatsapp.com">
@@ -126,7 +121,7 @@
             Copyright © 2022 Trackgenix SA . All rights reserved
         </div>
     </footer>
-
+    <script type="text/javascript" src="js/employee-signup.js"></script>
 </body>
 
 </html>

@@ -1,50 +1,58 @@
-.login-main{
+.main-container{
     display: flex;
     justify-content: center;
-    margin-top: auto; 
+    margin-top: auto;
 }
 .login-box{
-    box-sizing: border-box;
-    width: 35rem;
-    box-shadow: 1px 9px 26px -9px rgba(0,0,0,0.75);
-    align-self: center;
-    margin-top: auto;
-    height: 50vh;
-    width: 35vh;
-    padding: 2%;
-    align-items: center;
+    width: auto;
+    height: auto;
+    margin: 4rem;
+    border-top-style: none;
     background-color: white;
+    box-shadow: 1px 6px 9px 0px #262626;
+    border-radius:5px;
 }
-h2{
-    text-align: center;
+#dateOfBirth{
+    padding: 1rem;
+    border: #49A37B solid 2px;
+    border-radius: 5px;
+}
+.form-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1rem;
 }
 .form-container{
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: stretch;
+    justify-content: center;
 }
-input {
-    border: none;
-    background-color: #FFF8F8;
+.column-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem 1rem 1rem;
 }
-.input-login{
+h2{
+    margin-top: 2rem;
+    text-align: center;
+}
+.input-signup{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 15px;
+    margin-bottom: 3rem;
+}
+.input-box{
+    margin: 5%;
     border: none;
     border-bottom: solid #49A37B 0.5px;
-    margin-top:20%;
+    margin-top:5%;
 }
-.login-img{
-        height: 15px;
-        width: 15px;
-        margin-bottom: 0.2rem;
-}
-#checkbox{
-    size: 12px;
-}
-.checkbox{
-    margin: 5% 2% 5%;
-    font-size:  12px;
-}
+
 .forgot-password{
     font-size: 10px;
     text-align: end;
@@ -52,24 +60,65 @@ input {
     color: black;
     text-decoration: none;
 }
-.btn-login{
+.btn-create{
     border: none;
     background-color: #AACE9B;
     font-size: 12px;
     color: white;
     border-radius: 5px;
     height: 30px;
-
+    width: 100%;
+} 
+#checkbox{
+    size: 12px;
+}
+.checkbox{
+    margin: 2% 1% 2%;
+    font-size:  12px;
 }
 
 .alert{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 15rem;
-    height: 8rem;
-    line-height: 1rem;
-    background-color: #ff000059;
-    border-radius: 10px;
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+.alert-active{
+    display: block;
+}
+
+.confirm-data{
+    background: rgba(42, 158, 42, 0.389);
+    color: white;
+    align-self: center;
+    border-radius: 3px;
+    padding: 1rem;
+    margin: 1rem;
+    display: none;
+}
+.confirm-data-active{
+    background: rgba(42, 158, 42, 0.389);
+    color: white;
+    align-self: center;
+    border-radius: 3px;
+    padding: 1rem;
+    margin: 1rem;
+    display: block;
+}
+.not-confirm{
+    background: rgba(183, 43, 43, 0.455);
+    color: white;
+    align-self: center;
+    border-radius: 3px;
+    padding: 1rem;
+    margin: 1rem;
+    display: none;
+}
+.not-confirm-active{
+    display: block;
+}
+.input-error{
+    border-bottom: red solid 2px;
+}
+.remove-styles{
+    border: none;
 }
