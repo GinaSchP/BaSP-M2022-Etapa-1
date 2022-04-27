@@ -1,86 +1,82 @@
-.main-container{
+.form-main-container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
-.signup-box{
-    width: auto;
-    height: auto;
-    margin: 4rem;
-    border-top-style: none;
-    background-color: white;
-    box-shadow: 1px 6px 9px 0px #262626;
-    border-radius:5px;
-}
-#dateOfBirth{
+.form-box {
+    margin: 1rem;
     padding: 1rem;
-    border: #49A37B solid 2px;
+    background-color: #AACE9B;
+    border-top-style: none;
     border-radius: 5px;
-    color: #49A37B;
+    box-shadow: 1px 6px 9px 0px #262626;
 }
-.form-signup{
+.form-contact {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+    padding: 1rem;
 }
-.form-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.column-container{
+.form-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 0 1rem 1rem 1rem;
+    justify-content: center;
+    padding: 1rem;
+    border: white solid 2px;
+    border-radius: 3px;
 }
-h2{
-    margin-top: 2rem;
+.form-box h2{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.subtitle{
     text-align: center;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 3;
 }
-.input-signup{
+.form-line-category {
+    background: #AACE9B;
+    margin-bottom: 2rem;
+}
+.input-form-contact {
     display: flex;
     flex-direction: column;
     text-align: center;
     height: 15px;
     margin-bottom: 3rem;
 }
-.input-box{
+.input-box {
     margin: 5%;
     border: none;
     border-bottom: solid #49A37B 0.5px;
-    margin-top:5%;
+    background-color: #AACE9B;
 }
 .label{
     align-self: flex-start;
-    font-size: 13px;
-    background: #49a37a9f;
+    font-size: 14px;
     color: white
 }
 .label-error{
     background: rgba(255, 0, 0, 0.471);
 }
-.btn-create{
+.btn-submit-contact {
     width: 100%;
-    height: 30px;
-    margin: 0.3rem;
-    border: none;
-    background-color: #AACE9B;
+    background: #AACE9B;
+    border: 2px solid #ffffff ;
     border-radius: 5px;
-    font-size: 12px;
-    color: white;
-} 
-.alert{
+}
+.alert {
     color: red;
     font-size: 11px;
     display: none;
 }
-.alert-active{
+.alert-active {
     display: block;
 }
-.input-error{
+.input-error {
     border-bottom: red solid 2px;
 }
 .modal {

@@ -15,15 +15,17 @@ window.onload = function () {
         repeatPassword: false,
     }
 
-
     var form = document.getElementById('form-signup');
     var inputs = document.querySelectorAll('#form-signup input');
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
 
     inputs.forEach((input) => {
         input.addEventListener('blur', validForm);
         input.addEventListener('focus', function () {
             input.classList.remove('input-error');
             input.parentElement.lastElementChild.classList.remove('alert-active');
+            document.getElementById(`${input.name}Label`).classList.remove('label-error');
         });
     });
 
@@ -48,6 +50,15 @@ window.onload = function () {
                     classListCorrect('dni');
                 } else {
                     classListIncorrect('dni');
+                }
+                break;
+            case "dateOfBirth":
+                var today = new Date();
+                var inputDate = new Date(e.target.value);
+                if (inputDate < today) {
+                    classListCorrect('dateOfBirth');
+                } else {
+                    classListIncorrect('dateOfBirth');
                 }
                 break;
             case "phone":
@@ -93,15 +104,10 @@ window.onload = function () {
                 }
                 break;
             case "repeatPassword":
-                console.log(e.target.value);
                 if (e.target.value == document.getElementById('password').value) {
-                    document.getElementById('repeatPassword').classList.remove('input-error');
-                    document.getElementById('repeatPasswordAlert').classList.remove('alert-active');
-                    fields["repeatPassword"] = true;
+                    classListCorrect('repeatPassword')
                 } else {
-                    document.getElementById('repeatPassword').classList.add('input-error');
-                    document.getElementById('repeatPasswordAlert').classList.add('alert-active');
-                    fields["repeatPassword"] = false;
+                    classListIncorrect('repeatPassword')
                 }
                 break;
         }
@@ -110,13 +116,17 @@ window.onload = function () {
     function classListCorrect(id) {
         document.getElementById(id).classList.remove('input-error');
         document.getElementById(`${id}Alert`).classList.remove('alert-active');
+        document.getElementById(`${id}Label`).classList.remove('label-error');
         fields[id] = true;
     }
     function classListIncorrect(id) {
         document.getElementById(id).classList.add('input-error');
         document.getElementById(`${id}Alert`).classList.add('alert-active');
+        document.getElementById(`${id}Label`).classList.add('label-error');
         fields[id] = false;
     }
+
+
     function onlyLetters(string) {
         for (var i = 0; i < string.length; i++) {
             var c = string.charAt(i);
@@ -135,20 +145,6 @@ window.onload = function () {
         }
         return true;
     }
-    function lettersAndNumbersAndSpace(string) {
-        var havespace = false;
-        for (var i = 0; i < string.length; i++) {
-            var c = string.charAt(i);
-            if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == ' ') && isNaN(c)) {
-                return false;
-            } else {
-                if (c == ' ') {
-                    havespace = true;
-                }
-            }
-        }
-        return havespace;
-    }
     function lettersAndNumbers(string) {
         for (var i = 0; i < string.length; i++) {
             var c = string.charAt(i);
@@ -158,6 +154,21 @@ window.onload = function () {
             return true;
         }
     }
+    function lettersAndNumbersAndSpace(string) {
+        var havespace = false;
+        for (var i = 0; i < string.length; i++) {
+            var c = string.charAt(i);
+            if (!lettersAndNumbers(string) && isNaN(c)) {
+                return false;
+            } else {
+                if (c == ' ') {
+                    havespace = true;
+                }
+            }
+        }
+        return havespace;
+    }
+
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -166,51 +177,53 @@ window.onload = function () {
             for (var i = 0; i < inputs.length; i++) {
                 textCorrectData = textCorrectData + '\n' + `${inputs[i].name}` + ': ' + `${inputs[i].value}`;
             }
-            var messageBox = document.createElement('div');
-            messageBox.classList.add('confirm-data-active');
-            messageBox.innerHTML = textCorrectData;
-            var position = document.getElementById('signup-box');
-            position.appendChild(messageBox);
+            openModal(textCorrectData, 'modal-success');
+            form.reset();
 
-            var btnReset = document.getElementById('btn-reset');
-            btnReset.addEventListener('click', function () {
-                document.getElementById('signup-box').lastElementChild.remove();
-            })
-
+        } else {
+            var textErrorData = 'The form have not been send. Please complete properly. \n The errors are: \n';
+            for (var i = 0; i < inputs.length; i++) {
+                if (!fields[`${inputs[i].name}`])
+                    textErrorData = textErrorData + '\n' + `${inputs[i].name}\n` + ': ' + `${inputs[i].value}`;
+            }
+            openModal(textErrorData, 'modal-error');
             form.reset();
             inputs.forEach((input) => {
                 input.classList.remove('input-error');
                 input.parentElement.lastElementChild.classList.remove('alert-active');
+                document.getElementById(`${input.name}Label`).classList.remove('label-error');
             });
-
-        } else {
-            document.getElementById('not-confirm').classList.add('not-confirm-active');
-
-            var textErrorData = 'The errors are: \n';
-            for (var i = 0; i < inputs.length; i++) {
-                if (!fields[`${inputs[i].name}`])
-                    textErrorData = textErrorData + '\n' + `${inputs[i].name}\n`;
-            }
-            var messageBoxError = document.createElement('div');
-            messageBoxError.classList.add('not-confirm-active');
-            messageBoxError.innerHTML = textErrorData;
-            var position = document.getElementById('not-confirm');
-            position.appendChild(messageBoxError);
-
-
-            var btnReset = document.getElementById('btn-reset');
-            btnReset.addEventListener('click', function () {
-                document.getElementById('not-confirm').classList.remove('not-confirm-active');
-                form.reset();
-                inputs.forEach((input) => {
-                    input.classList.remove('input-error');
-                    input.parentElement.lastElementChild.classList.remove('alert-active');
-
-                });
-            })
         }
+    })
+
+    function openModal(textData, status) {
+        modal.style.display = "block";
+        var modalText = document.getElementById('text-modal').innerHTML = textData;
+        document.getElementById('modal-content').classList.add(`${status}`);
+        span.onclick = function () {
+            modal.style.display = "none";
+            document.getElementById('modal-content').classList.remove(`${status}`);
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            document.getElementById('modal-content').classList.remove(`${status}`);
+        }
+    }
+
+    var btnReset = document.getElementById('btn-reset');
+    btnReset.addEventListener('click', function () {
+        form.reset();
+        inputs.forEach((input) => {
+            input.classList.remove('input-error');
+            input.parentElement.lastElementChild.classList.remove('alert-active');
+             document.getElementById(`${input.name}Label`).classList.remove('label-error');
+    
+        });
     })
 
 
 
 }
+

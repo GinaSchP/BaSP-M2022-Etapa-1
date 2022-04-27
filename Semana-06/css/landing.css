@@ -15,7 +15,6 @@ h1 {
     padding: 3.125rem 1rem;
 }
 h2 {
-    margin: 5%;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
@@ -66,40 +65,7 @@ h2 {
     border-radius: 10px;
     list-style: disc;
 }
-.contact {
-    display: flex;
-    flex-direction: column;
-    margin: 5%;
-    padding: 5%;
-    background: #AACE9B;
-}
-.contact .subtitle {
-    display: flex;
-    align-items: center;
-    height: 50px;
-    padding-left: 10px;
-    border: solid black 1px;
-    background: white;
-}
-.form-line {
-    display: flex;
-    justify-content: space-around;
-    margin: 15px;
-}
-.form-line input {
-    margin-left: 2rem;
-    background-color: #AACE9B;
-}
-.form-line #message {
-    height: 6rem;
-}
-.form-line-category {
-    background: #AACE9B;
-}
-.btn-form button {
-    width: 100%;
-    background: #AACE9B;
-}
+
 .about-us {
     display: flex;
     align-items: center;

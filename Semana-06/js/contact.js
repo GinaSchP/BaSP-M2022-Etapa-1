@@ -4,13 +4,13 @@ window.onload = function () {
         email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     }
     const fields = {
-        password: false,
-        repeatPassword: false,
-        email:false,
+        name: false,
+        email: false,
+        message: false,
     }
 
-    var form = document.getElementById('form-login');
-    var inputs = document.querySelectorAll('#form-login input');
+    var form = document.getElementById('form-contact');
+    var inputs = document.querySelectorAll('#form-contact input');
     var modal = document.getElementById("myModal");
     var span = document.getElementsByClassName("close")[0];
 
@@ -25,6 +25,13 @@ window.onload = function () {
 
     function validForm(e) {
         switch (e.target.name) {
+            case "name":
+                if (e.target.value.length > 3 && onlyLetters(e.target.value)) {
+                    classListCorrect('name');
+                } else {
+                    classListIncorrect('name');
+                }
+                break;
             case "email":
                 if (expressions.email.test(e.target.value)) {
                     classListCorrect('email');
@@ -32,11 +39,11 @@ window.onload = function () {
                     classListIncorrect('email');
                 }
                 break;
-            case "password":
-                if (e.target.value.length >= 8 && lettersAndNumbers(e.target.value)) {
-                    classListCorrect('password');
+            case "message":
+                if (e.target.value.length > 3 && lettersAndNumbers(e.target.value)) {
+                    classListCorrect('message');
                 } else {
-                    classListIncorrect('password');
+                    classListIncorrect('message');
                 }
                 break;
         }
@@ -54,6 +61,17 @@ window.onload = function () {
         document.getElementById(`${id}Label`).classList.add('label-error');
         fields[id] = false;
     }
+
+    function onlyLetters(string) {
+        for (var i = 0; i < string.length; i++) {
+            var c = string.charAt(i);
+            if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == ' ')) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     function lettersAndNumbers(string) {
         for (var i = 0; i < string.length; i++) {
             var c = string.charAt(i);
@@ -66,7 +84,7 @@ window.onload = function () {
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        if (fields.email & fields.password) {
+        if (fields.email && fields.name && fields.message) {
             var textCorrectData = 'Your Data is correct : \n';
             for (var i = 0; i < inputs.length; i++) {
                 textCorrectData = textCorrectData + '\n' + `${inputs[i].name}` + ': ' + `${inputs[i].value}`;
@@ -106,4 +124,3 @@ window.onload = function () {
     }
 
 }
-
