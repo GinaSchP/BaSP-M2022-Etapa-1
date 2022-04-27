@@ -61,7 +61,7 @@ window.onload = function () {
         document.getElementById(`${id}Label`).classList.add('label-error');
         fields[id] = false;
     }
-
+    
     function onlyLetters(string) {
         for (var i = 0; i < string.length; i++) {
             var c = string.charAt(i);
@@ -71,7 +71,6 @@ window.onload = function () {
         }
         return true;
     }
-
     function lettersAndNumbers(string) {
         for (var i = 0; i < string.length; i++) {
             var c = string.charAt(i);
@@ -81,7 +80,6 @@ window.onload = function () {
             return true;
         }
     }
-
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         if (fields.email && fields.name && fields.message) {
