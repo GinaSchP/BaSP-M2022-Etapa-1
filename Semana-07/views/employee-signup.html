@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/employee-signup.css">
+        <title>Employee Sign Up</title>
+    </head>
+    <body>
+        <header class="header">
+            <img src="../assets/logo.png" alt="logo"> 
+            <ul class="navbar-list">
+                <li><a class="nav-link" href="index.html">HOME</a></li>
+                <li><a class="nav-link" href="#our-job">our Job</a></li>
+                <li><a class="nav-link" href="#functionalities">Functionalities</a></li>
+                <li><a class="nav-link" href="#choose-us">Why Us</a></li>
+                <li><a class="nav-link" href="#contact">contact us</a></li>
+                <li><a class="nav-link" href="#history">who we are</a></li>
+                <li><a class="nav-link" href="#sitemap">site map</a></li>
+            </ul>
+            <button class="btn-burger">
+                <img class="burger-menu" src="../assets/burger-menu.png" alt="">
+            </button>
+        </header>
+        <main class="main-container">
+            <div class="signup-box" id="signup-box">
+                <h2 id="h2"> SignUp</h2>
+                <form id="form-signup" class="form-signup" action="">
+                    <div class="form-container">
+                        <div class="column-container">
+                            <div class="input-signup">
+                                <label for="name" id="nameLabel" class="label">Name</label>
+                                <input id="name" class="input-box" type="text" name="name" placeholder="Name" required>
+                                <div class="alert" id="nameAlert">Name incorrect must have +3 characters</div>
+                            </div>
+                            <div class="input-signup">
+                                <label for="Lastname" id="lastNameLabel" class="label">Lastname</label>
+                                <input id="lastName" class="input-box" type="text" name="lastName" placeholder="Last Name"
+                                    required>
+                                <div class="alert" id="lastNameAlert">Lastname incorrect must have +3 characters</div>
+                            </div>
+                            <div class="input-signup">
+                                <label for="dni" id="dniLabel" class="label">DNI</label>
+                                <input id="dni" type="text" name="dni" placeholder="DNI" class="input-box" required>
+                                <div class="alert" id="dniAlert">DNI incorrect must have 7 o + numbers</div>
+                            </div>
+                            <div class="input-signup">
+                                <label for="dob" id="dobLabel" class="label">Date of Birth</label>
+                                <input id="dob" type="text" name="dob" required>
+                                <div class="alert" id="dobAlert">Date format must be mm/dd/yyyy</div>
+                            </div>
+                            <div class="input-signup">
+                                <label for="phone" id="phoneLabel" class="label">Phone</label>
+                                <input id="phone" type="text" name="phone" placeholder="Phone" class="input-box" required>
+                                <div class="alert" id="phoneAlert">Phone incorrect must have 10 numbers</div>
+                            </div>
+                            <div class="input-signup">
+                                <label for="address" id="addressLabel" class="label">Address</label>
+                                <input id="address" type="text" name="address" placeholder="Address" class="input-box"
+                                    required>
+                                <div class="alert" id="addressAlert">Adress incorrect must have 1 space, letters and numbers</div>
+                            </div>
+                        </div>
+                        <div class="column-container">
+                            <div class="input-signup">
+                                <label for="city" id="cityLabel" class="label">City</label>
+                                <input id="city" type="text" name="city" placeholder="City" class="input-box" required>
+                                <div class="alert" id="cityAlert">Not valid City must have + 3 characters</div>
+                            </div>
+                            <div class="input-signup">
+                                <label for="zip" id="zipLabel" class="label">Postal Code</label>
+                                <input id="zip" type="text" name="zip" placeholder="Postal code"
+                                    class="input-box" required>
+                                <div class="alert" id="zipAlert">Not valid Postal Code must have 4 or 5 characters </div>
+                            </div>
+                            <div class="input-signup">
+                                <label for="email" id="emailLabel" class="label">Email</label>
+                                <input id="email" type="text" name="email" placeholder="Email" class="input-box" required>
+                                <div class="alert" id="emailAlert">Not valid email format remember @ and . </div>
+                            </div>
+                            <div class="input-signup">
+                                <label for="password" id="passwordLabel" class="label">Password</label>
+                                <input id="password" type="password" name="password" placeholder="Password"
+                                    class="input-box" required>
+                                <div class="alert" id="passwordAlert">Not valid Password must have min 8 characters</div>
+                            </div>
+                            <div class="input-signup">
+                                <label for="repeatPassword" id="repeatPasswordLabel" class="label">Repeat Password</label>
+                                <input id="repeatPassword" type="password" name="repeatPassword"
+                                    placeholder="Repeat Password" class="input-box" required>
+                                <div class="alert" id="repeatPasswordAlert">Passwords not match</div>
+                            </div>
+                            <button type="submit" class="btn-create">Create</button>
+                            <button type="reset" id="btn-reset" class="btn-create">Reset</button>
+                        </div>
+                </form>
+            </div>
+            <div id="myModal" class="modal">
+                <div id="modal-content" class="modal-content">
+                    <span class="close">&times;</span>
+                    <span id="title-modal"></span>
+                    <p id="text-modal"></p>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="images">
+                <a href="http://www.whatsapp.com">
+                    <img src="../assets/wsp.png" alt="Whatsapp-logo">
+                </a>
+                <a href="http://www.instagram.com">
+                    <img src="../assets/ig.png" alt="Instagram-logo">
+                </a>
+                <a href="http://www.facebook.com">
+                    <img src="../assets/fb.png" alt="Facebook-logo">
+                </a>
+                <a href="http://www.linkedin.com">
+                    <img src="../assets/lk.png" alt="Linkedin-logo">
+                </a>
+            </div>
+            <div>
+                Rosario, Argentina
+            </div>
+            <div>
+                Copyright © 2022 Trackgenix SA . All rights reserved
+            </div>
+        </footer>
+        <script type="text/javascript" src="../js/employee-signup.js"></script>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/login.css">
+        <title>Log In</title>
+    </head>
+    <body>
+        <header class="header">
+           <img src="../assets/logo.png" alt="logo"> 
+            <ul class="navbar-list">
+                <li><a class="nav-link" href="index.html">HOME</a></li>
+                <li><a class="nav-link" href="#our-job">our Job</a></li>
+                <li><a class="nav-link" href="#functionalities">Functionalities</a></li>
+                <li><a class="nav-link" href="#choose-us">Why Us</a></li>
+                <li><a class="nav-link" href="#contact">contact us</a></li>
+                <li><a class="nav-link" href="#history">who we are</a></li>
+                <li><a class="nav-link" href="#sitemap">site map</a></li>
+            </ul>
+            <button class="btn-burger">
+                <img class="burger-menu" src="../assets/burger-menu.png" alt="">
+            </button>
+        </header>
+        <main class="main-container">
+            <div class="login-box" id="login-box">
+                <h2 id="h2"> SignUp</h2>
+                <form id="form-login" class="form-login" action="">
+                    <div class="form-container">
+                        <div class="input-login">
+                            <label for="email" id="emailLabel" class="label">Email</label>
+                            <input id="email" type="text" name="email" placeholder="Email" class="input-box" required>
+                            <div class="alert" id="emailAlert">Not valid email. Remember @ and . </div>
+                        </div>
+                        <div class="input-login">
+                            <label for="password" id="passwordLabel" class="label">Password</label>
+                            <input id="password" type="password" name="password" placeholder="Password" class="input-box"
+                                required>
+                            <div class="alert" id="passwordAlert">Not valid Password must have 8 characters min</div>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" name="" id="checkbox">
+                            <label for="checkbox">Remember me</label>
+                        </div>
+                        <a class="forgot-password" href="#">Forgot password?</a>
+                        <button type="submit" class="btn-login">Login</button>
+                    </div>
+                </form>
+            </div>
+            <div id="myModal" class="modal">
+                <div id="modal-content" class="modal-content">
+                    <span class="close">&times;</span>
+                    <span id="modal-title"></span>
+                    <p id="text-modal"></p>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="images">
+                <a href="http://www.whatsapp.com">
+                    <img src="../assets/wsp.png" alt="Whatsapp-logo">
+                </a>
+                <a href="http://www.instagram.com">
+                    <img src="../assets/ig.png" alt="Instagram-logo">
+                </a>
+                <a href="http://www.facebook.com">
+                    <img src="../assets/fb.png" alt="Facebook-logo">
+                </a>
+                <a href="http://www.linkedin.com">
+                    <img src="../assets/lk.png" alt="Linkedin-logo">
+                </a>
+            </div>
+            <div>
+                Rosario, Argentina
+            </div>
+            <div>
+                Copyright © 2022 Trackgenix SA . All rights reserved
+            </div>
+        </footer>
+        <script src="../js/login.js"></script>
+    </body>
+</html>

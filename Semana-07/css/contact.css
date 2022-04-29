@@ -1,0 +1,120 @@
+.form-main-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.form-box {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #AACE9B;
+    border-top-style: none;
+    border-radius: 5px;
+    box-shadow: 1px 6px 9px 0px #262626;
+}
+.form-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    border: white solid 2px;
+    border-radius: 3px;
+}
+.form-box h2{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.subtitle{
+    text-align: center;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 3;
+}
+.form-line-category {
+    background: #AACE9B;
+    margin-bottom: 2rem;
+}
+.input-form-contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 15px;
+    margin-bottom: 3rem;
+}
+.input-box {
+    margin: 5%;
+    border: none;
+    border-bottom: solid #49A37B 0.5px;
+    background-color: #AACE9B;
+}
+.label{
+    align-self: flex-start;
+    font-size: 14px;
+    color: white
+}
+.label-error{
+    background: rgba(255, 0, 0, 0.471);
+}
+.btn-submit-contact {
+    width: 100%;
+    background: #AACE9B;
+    border: 2px solid #ffffff ;
+    border-radius: 5px;
+}
+.alert {
+    color: red;
+    font-size: 11px;
+    display: none;
+}
+.alert-active {
+    display: block;
+}
+.input-error {
+    border-bottom: red solid 2px;
+}
+.modal {
+    display: none;
+    z-index: 20000;
+    position: fixed;
+    padding: 5rem 1rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-success {
+    background-color: #49a37ac3;
+}
+.modal-error {
+    background-color: rgba(255, 0, 0, 0.652);
+}

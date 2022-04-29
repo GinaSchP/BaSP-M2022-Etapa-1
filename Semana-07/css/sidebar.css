@@ -1,0 +1,25 @@
+aside {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 15vw;
+    padding-top: 4rem;
+    padding-left: 1rem;
+    background: linear-gradient(50deg, #49a37b, #daf0e7);
+    z-index: 1000;
+}
+aside li{
+    margin-top: 1rem;
+}
+aside a{
+    color: black;
+    text-transform: uppercase;    
+}
+aside a:hover{
+    border-bottom: black solid 1px;
+}
+@media (min-width: 768px) {
+    aside {
+        display: flex;     
+    }
+}
