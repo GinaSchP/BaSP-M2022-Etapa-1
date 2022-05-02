@@ -31,7 +31,6 @@ window.onload = function () {
     var span = document.getElementsByClassName("close")[0];
 
     inputs.forEach((input) => {
-        validFormWithoutBlur(input);
         input.addEventListener('blur', validForm);
         input.addEventListener('focus', function () {
             input.classList.remove('input-error');
@@ -284,14 +283,13 @@ window.onload = function () {
         var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?';
         var params = '';
         inputs.forEach((input) => {
+            validFormWithoutBlur(input);
             params+=`${input.name}=${input.value}&`;
         });
         paramsWithDateMod = params.replace(`dob=${inputs[3].value}`, `dob=${dateFormat}`);
         var textCorrectData = '';
         var textErrorData = '';
-        console.log(params)
         if (fieldsValidate()) {
-            console.log('entro a validados')
             fetch(`${url}${paramsWithDateMod}`)
             .then(response => response.json())
             .then(json  =>  {
@@ -353,7 +351,6 @@ window.onload = function () {
     function save(){
         inputs.forEach((input) => {
             localStorage.setItem(`${input.name}`, `${input.value}`);
-            console.log(localStorage.getItem(`${input.name}`, `${input.value}`));
         })
     }
 
