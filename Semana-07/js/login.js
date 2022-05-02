@@ -84,7 +84,7 @@ window.onload = function () {
                     openModal(textCorrectData, 'modal-success', 'Your data is correct');
                 } 
                 else {
-                    openModal('error', 'modal-error' , 'The email or the password are not correct')
+                    openModal(json.msg, 'modal-error' , 'Something was wrong')
                 }
                 form.reset();
             })

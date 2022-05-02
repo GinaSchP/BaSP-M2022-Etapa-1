@@ -43,7 +43,6 @@ window.onload = function () {
     function validFormWithoutBlur(input){
         switch (input.name) {
             case "name":
-                console.log('entra al name')
                 if (input.value.length > 3 && onlyLetters(input.value)) {
                     classListCorrect('name');
                 } else {
@@ -66,13 +65,14 @@ window.onload = function () {
                 break;
             case "dob":
                 var today = new Date();
-                var inputDate = new Date(input.value);
-                console.log(input.value);  
+                var inputDate = new Date(input.value); 
                 if (inputDate < today) {
                     classListCorrect('dob');
                 } else {
                     classListIncorrect('dob');
                 }
+                var dateArray = input.value.split('-');
+                dateFormat= dateArray[1] + '/' + dateArray[2] + '/' + dateArray[0];
                 break;
             case "phone":
                 if (input.value.length == 10 && onlyNumbers(input.value)) {
@@ -286,13 +286,13 @@ window.onload = function () {
         inputs.forEach((input) => {
             params+=`${input.name}=${input.value}&`;
         });
-        params.replace(`dob=${inputs[3].value}`, `holaaa`);
+        paramsWithDateMod = params.replace(`dob=${inputs[3].value}`, `dob=${dateFormat}`);
         var textCorrectData = '';
         var textErrorData = '';
         console.log(params)
         if (fieldsValidate()) {
             console.log('entro a validados')
-            fetch(`${url}${params}`)
+            fetch(`${url}${paramsWithDateMod}`)
             .then(response => response.json())
             .then(json  =>  {
                 for (var d in json.data){
@@ -304,15 +304,15 @@ window.onload = function () {
             })
             .catch(error =>{
                 console.log(error)
-                openModal(error, 'modal-error', 'an error occurred')
+                openModal(error.msg, 'modal-error', 'an error occurred')
             })
         } else {
             for (var i = 0; i < inputs.length; i++) {
                 if (!fields[`${inputs[i].name}`])
                     textErrorData = textErrorData + '\n' + `${inputs[i].name}\n` + ': ' + `${inputs[i].value}`;
             }
-            openModal(textErrorData, 'modal-error');
-            form.reset();
+            openModal(textErrorData, 'modal-error', 'Your data is incorrect, complete the form properly, the errors are: ');
+            validFormWithoutBlur();
             inputs.forEach((input) => {
                 input.classList.remove('input-error');
                 input.parentElement.lastElementChild.classList.remove('alert-active');
