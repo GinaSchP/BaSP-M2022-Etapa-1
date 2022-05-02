@@ -11,12 +11,12 @@
     box-shadow: 1px 6px 9px 0px #262626;
     border-radius:5px;
 }
-/* #dob{
+#dob{
     padding: 1rem;
     border: #49A37B solid 2px;
     border-radius: 5px;
     color: #49A37B;
-} */
+}
 .form-signup{
     display: flex;
     flex-wrap: wrap;

@@ -1,4 +1,15 @@
 window.onload = function () {
+
+    var form = document.getElementById('form-signup');
+    var inputs = document.querySelectorAll('#form-signup input');
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
+    var dateFormat = '';
+    //control localstorage
+        inputs.forEach((input) => {
+            input.value = !!localStorage.getItem(`${input.name}`) ? localStorage.getItem(`${input.name}`) : null;
+        });
+
     const expressions = {
         email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     }
@@ -16,12 +27,11 @@ window.onload = function () {
         repeatPassword: false,
     }
 
-    var form = document.getElementById('form-signup');
-    var inputs = document.querySelectorAll('#form-signup input');
     var modal = document.getElementById("myModal");
     var span = document.getElementsByClassName("close")[0];
 
     inputs.forEach((input) => {
+        validFormWithoutBlur(input);
         input.addEventListener('blur', validForm);
         input.addEventListener('focus', function () {
             input.classList.remove('input-error');
@@ -30,9 +40,97 @@ window.onload = function () {
         });
     });
 
+    function validFormWithoutBlur(input){
+        switch (input.name) {
+            case "name":
+                console.log('entra al name')
+                if (input.value.length > 3 && onlyLetters(input.value)) {
+                    classListCorrect('name');
+                } else {
+                    classListIncorrect('name');
+                }
+                break;
+            case "lastName":
+                if (input.value.length > 3 && onlyLetters(input.value)) {
+                    classListCorrect('lastName');
+                } else {
+                    classListIncorrect('lastName');
+                }
+                break;
+            case "dni":
+                if (input.value.length >= 7 && onlyNumbers(input.value)) {
+                    classListCorrect('dni');
+                } else {
+                    classListIncorrect('dni');
+                }
+                break;
+            case "dob":
+                var today = new Date();
+                var inputDate = new Date(input.value);
+                console.log(input.value);  
+                if (inputDate < today) {
+                    classListCorrect('dob');
+                } else {
+                    classListIncorrect('dob');
+                }
+                break;
+            case "phone":
+                if (input.value.length == 10 && onlyNumbers(input.value)) {
+                    classListCorrect('phone');
+                } else {
+                    classListIncorrect('phone');
+                }
+                break;
+            case "address":
+                if (input.value.length >= 5 && lettersAndNumbersAndSpace(input.value)) {
+                    classListCorrect('address');
+                } else {
+                    classListIncorrect('address');
+                }
+                break;
+            case "city":
+                if (input.value.length > 3 && lettersAndNumbers(input.value)) {
+                    classListCorrect('city');
+                } else {
+                    classListIncorrect('city');
+                }
+                break;
+            case "zip":
+                if (input.value.length >= 4 && input.value.length <= 5 && onlyNumbers(input.value)) {
+                    classListCorrect('zip');
+                } else {
+                    classListIncorrect('zip');
+                }
+                break;
+            case "email":
+                if (expressions.email.test(input.value)) {
+                    classListCorrect('email');
+                } else {
+                    classListIncorrect('email');
+                }
+                break;
+            case "password":
+                if (input.value.length >= 8 && lettersAndNumbers(input.value)) {
+                    classListCorrect('password');
+                } else {
+                    classListIncorrect('password');
+                }
+                break;
+            case "repeatPassword":
+                if (input.value == document.getElementById('password').value) {
+                    classListCorrect('repeatPassword')
+                } else {
+                    classListIncorrect('repeatPassword')
+                }
+                break;
+        }   
+        
+    }
+
     function validForm(e) {
         switch (e.target.name) {
             case "name":
+                console.log('entra al name')
                 if (e.target.value.length > 3 && onlyLetters(e.target.value)) {
                     classListCorrect('name');
                 } else {
@@ -62,6 +160,10 @@ window.onload = function () {
                 } else {
                     classListIncorrect('dob');
                 }
+                var dateArray = e.target.value.split('-');
+                console.log(dateArray);
+                dateFormat= dateArray[1] + '/' + dateArray[2] + '/' + dateArray[0];
+                console.log(dateFormat)
                 break;
             case "phone":
                 if (e.target.value.length == 10 && onlyNumbers(e.target.value)) {
@@ -175,7 +277,7 @@ window.onload = function () {
         return fields.name && fields.lastName && fields.dni && fields.dob && fields.phone && fields.address && fields.city && fields.zip && fields.email && fields.password && fields.repeatPassword
     }
 
-    
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         e.preventDefault();
@@ -184,6 +286,7 @@ window.onload = function () {
         inputs.forEach((input) => {
             params+=`${input.name}=${input.value}&`;
         });
+        params.replace(`dob=${inputs[3].value}`, `holaaa`);
         var textCorrectData = '';
         var textErrorData = '';
         console.log(params)
@@ -193,10 +296,10 @@ window.onload = function () {
             .then(response => response.json())
             .then(json  =>  {
                 for (var d in json.data){
-                    console.log(d + json.data[d])
                     textCorrectData += `<p>${d}: ${json.data[d]}<p/>`
                 }
                 openModal(textCorrectData, 'modal-success', `Your data is correct! ${json.msg}`);
+                save();
                 form.reset();
             })
             .catch(error =>{
@@ -245,6 +348,14 @@ window.onload = function () {
     
         });
     })
+
+
+    function save(){
+        inputs.forEach((input) => {
+            localStorage.setItem(`${input.name}`, `${input.value}`);
+            console.log(localStorage.getItem(`${input.name}`, `${input.value}`));
+        })
+    }
 
 
 
