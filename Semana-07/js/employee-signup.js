@@ -5,10 +5,10 @@ window.onload = function () {
     var modal = document.getElementById("myModal");
     var span = document.getElementsByClassName("close")[0];
     var dateFormat = '';
-    //control localstorage
-        inputs.forEach((input) => {
-            input.value = !!localStorage.getItem(`${input.name}`) ? localStorage.getItem(`${input.name}`) : null;
-        });
+
+    inputs.forEach((input) => {
+        input.value = !!localStorage.getItem(`${input.name}`) ? localStorage.getItem(`${input.name}`) : null;
+    });
 
     const expressions = {
         email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
@@ -21,7 +21,7 @@ window.onload = function () {
         phone: false,
         address: false,
         city: false,
-        postalCode: false,
+        zip: false,
         email: false,
         password: false,
         repeatPassword: false,
@@ -39,97 +39,37 @@ window.onload = function () {
         });
     });
 
-    function validFormWithoutBlur(input){
-        switch (input.name) {
-            case "name":
-                if (input.value.length > 3 && onlyLetters(input.value)) {
-                    classListCorrect('name');
-                } else {
-                    classListIncorrect('name');
-                }
-                break;
-            case "lastName":
-                if (input.value.length > 3 && onlyLetters(input.value)) {
-                    classListCorrect('lastName');
-                } else {
-                    classListIncorrect('lastName');
-                }
-                break;
-            case "dni":
-                if (input.value.length >= 7 && onlyNumbers(input.value)) {
-                    classListCorrect('dni');
-                } else {
-                    classListIncorrect('dni');
-                }
-                break;
-            case "dob":
-                var today = new Date();
-                var inputDate = new Date(input.value); 
-                if (inputDate < today) {
-                    classListCorrect('dob');
-                } else {
-                    classListIncorrect('dob');
-                }
-                var dateArray = input.value.split('-');
-                dateFormat= dateArray[1] + '/' + dateArray[2] + '/' + dateArray[0];
-                break;
-            case "phone":
-                if (input.value.length == 10 && onlyNumbers(input.value)) {
-                    classListCorrect('phone');
-                } else {
-                    classListIncorrect('phone');
-                }
-                break;
-            case "address":
-                if (input.value.length >= 5 && lettersAndNumbersAndSpace(input.value)) {
-                    classListCorrect('address');
-                } else {
-                    classListIncorrect('address');
-                }
-                break;
-            case "city":
-                if (input.value.length > 3 && lettersAndNumbers(input.value)) {
-                    classListCorrect('city');
-                } else {
-                    classListIncorrect('city');
-                }
-                break;
-            case "zip":
-                if (input.value.length >= 4 && input.value.length <= 5 && onlyNumbers(input.value)) {
-                    classListCorrect('zip');
-                } else {
-                    classListIncorrect('zip');
-                }
-                break;
-            case "email":
-                if (expressions.email.test(input.value)) {
-                    classListCorrect('email');
-                } else {
-                    classListIncorrect('email');
-                }
-                break;
-            case "password":
-                if (input.value.length >= 8 && lettersAndNumbers(input.value)) {
-                    classListCorrect('password');
-                } else {
-                    classListIncorrect('password');
-                }
-                break;
-            case "repeatPassword":
-                if (input.value == document.getElementById('password').value) {
-                    classListCorrect('repeatPassword')
-                } else {
-                    classListIncorrect('repeatPassword')
-                }
-                break;
-        }   
-        
+
+    function validFormWithoutBlur() {
+        fields.name = inputs[0].value.length > 3 && onlyLetters(inputs[0].value);
+        fields.lastName = inputs[1].value.length > 3 && onlyLetters(inputs[1].value);
+        fields.dni = inputs[2].value.length >= 7 && onlyNumbers(inputs[2].value);
+        var today = new Date();
+        var inputDate = new Date(inputs[3].value);
+        var dateArray = inputs[3].value.split('-');
+        dateFormat = dateArray[1] + '/' + dateArray[2] + '/' + dateArray[0];
+        fields.dob = inputDate < today;
+        fields.phone = inputs[4].value.length == 10 && onlyNumbers(inputs[4].value);
+        fields.address = inputs[5].value.length >= 5 && lettersAndNumbersAndSpace(inputs[5].value)
+        fields.city = inputs[6].value.length > 3 && lettersAndNumbers(inputs[6].value)
+        fields.zip = inputs[7].value.length >= 4 && inputs[7].value.length <= 5 && onlyNumbers(inputs[7].value)
+        fields.email = expressions.email.test(inputs[8].value)
+        fields.password = inputs[9].value.length >= 8 && lettersAndNumbers(inputs[9].value)
+        fields.repeatPassword = inputs[10].value == document.getElementById('password').value;
+
+        for (var i = 0; i < inputs.length; i++) {
+            if (fields[`${inputs[i].name}`]) {
+                classListCorrect(`${inputs[i].name}`)
+            } else {
+                classListIncorrect(`${inputs[i].name}`)
+            }
+        }
     }
+
 
     function validForm(e) {
         switch (e.target.name) {
             case "name":
-                console.log('entra al name')
                 if (e.target.value.length > 3 && onlyLetters(e.target.value)) {
                     classListCorrect('name');
                 } else {
@@ -153,16 +93,13 @@ window.onload = function () {
             case "dob":
                 var today = new Date();
                 var inputDate = new Date(e.target.value);
-                console.log(e.target.value);  
                 if (inputDate < today) {
                     classListCorrect('dob');
                 } else {
                     classListIncorrect('dob');
                 }
                 var dateArray = e.target.value.split('-');
-                console.log(dateArray);
-                dateFormat= dateArray[1] + '/' + dateArray[2] + '/' + dateArray[0];
-                console.log(dateFormat)
+                dateFormat = dateArray[1] + '/' + dateArray[2] + '/' + dateArray[0];
                 break;
             case "phone":
                 if (e.target.value.length == 10 && onlyNumbers(e.target.value)) {
@@ -272,50 +209,44 @@ window.onload = function () {
         return havespace;
     }
 
-    function fieldsValidate(){
+    function fieldsValidate() {
         return fields.name && fields.lastName && fields.dni && fields.dob && fields.phone && fields.address && fields.city && fields.zip && fields.email && fields.password && fields.repeatPassword
     }
 
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        e.preventDefault();
         var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?';
         var params = '';
         inputs.forEach((input) => {
-            validFormWithoutBlur(input);
-            params+=`${input.name}=${input.value}&`;
+            params += `${input.name}=${input.value}&`;
+            validFormWithoutBlur();
         });
         paramsWithDateMod = params.replace(`dob=${inputs[3].value}`, `dob=${dateFormat}`);
         var textCorrectData = '';
         var textErrorData = '';
+
         if (fieldsValidate()) {
             fetch(`${url}${paramsWithDateMod}`)
-            .then(response => response.json())
-            .then(json  =>  {
-                for (var d in json.data){
-                    textCorrectData += `<p>${d}: ${json.data[d]}<p/>`
-                }
-                openModal(textCorrectData, 'modal-success', `Your data is correct! ${json.msg}`);
-                save();
-                form.reset();
-            })
-            .catch(error =>{
-                console.log(error)
-                openModal(error.msg, 'modal-error', 'an error occurred')
-            })
+                .then(response => response.json())
+                .then(json => {
+                    for (var d in json.data) {
+                        textCorrectData += `<p>${d}: ${json.data[d]}<p/>`
+                    }
+                    openModal(textCorrectData, 'modal-success', `Your data is correct! ${json.msg}`);
+                    save();
+                    form.reset();
+                })
+                .catch(error => {
+                    console.log(error)
+                    openModal(error.msg, 'modal-error', 'an error occurred')
+                })
         } else {
             for (var i = 0; i < inputs.length; i++) {
                 if (!fields[`${inputs[i].name}`])
                     textErrorData = textErrorData + '\n' + `${inputs[i].name}\n` + ': ' + `${inputs[i].value}`;
             }
             openModal(textErrorData, 'modal-error', 'Your data is incorrect, complete the form properly, the errors are: ');
-            validFormWithoutBlur();
-            inputs.forEach((input) => {
-                input.classList.remove('input-error');
-                input.parentElement.lastElementChild.classList.remove('alert-active');
-                document.getElementById(`${input.name}Label`).classList.remove('label-error');
-            });
         }
     })
 
@@ -342,13 +273,12 @@ window.onload = function () {
         inputs.forEach((input) => {
             input.classList.remove('input-error');
             input.parentElement.lastElementChild.classList.remove('alert-active');
-             document.getElementById(`${input.name}Label`).classList.remove('label-error');
-    
+            document.getElementById(`${input.name}Label`).classList.remove('label-error');
+
         });
     })
 
-
-    function save(){
+    function save() {
         inputs.forEach((input) => {
             localStorage.setItem(`${input.name}`, `${input.value}`);
         })
@@ -357,4 +287,3 @@ window.onload = function () {
 
 
 }
-
